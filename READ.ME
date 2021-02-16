@@ -1,3 +1,12 @@
+MAIN PROBLEMS
+
+- Existing API package core running from another site, so any CSS input + event.listeners seem to 
+clash and won't allow any direct interaction with the events reporter + elements (class = input, autocomplete, submit, also for the API click.events, message interaction). It's this link here: https://clouderrorreporting.googleapis.com/v1beta1/projects/cargo-error-reporting/events:report?key=AIzaSyDW2mS9nBXWtG8Nbfz-PQjFvSJFXHN2lq8 
+- Tried to assign a specific pixi.js interaction with the background element for real time interaction. 
+- Clashing with the securing of Cloud Firestore 'box-input' to catch below. 
+- 404 errors from 'modal.html', https://clouderrorreporting.googleapis.com/v1beta1/projects/cargo-error-reporting/events:report?key=AIzaSyDW2mS9nBXWtG8Nbfz-PQjFvSJFXHN2lq8
+- Overlap of CSS from Materialise and style.css as some elements weren't loading - poor management of code and file size
+
 Full GA FINAL LOG 
 
 - Installed Parcel / node modules Initiated
@@ -26,9 +35,9 @@ Attemped to piece backbone to pixi to html with no luck.
 - pixi.js | pixi.min.js | slideshow.js looking to orientate the local-style="8273683
 - Perhaps I needed to turn the local-style="8273683 background into an object?
 
-INITIATE 
-
-Set up API Key from NYT and Insomnia 
-
-DOM Loaded 
-Keys.js contains API Keys + Firebase Keys
+JS in APP.JS + INDEX.JS 
+- Firebase configuration
+- Box Inputs to catch the form details 
+- Submit JS 
+- Import * as database from "/database";
+- Event Listeners + DOM initialise

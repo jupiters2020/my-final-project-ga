@@ -16,8 +16,54 @@
 	
 	<!-- set an empty favicon to prevent a network request to /favicon.ico--> 
 	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+	
+		<!-- <script> FOR PIXI TRIALS which loads in the server browser (Live Pixi is below)
+		let app; 
+		let player; 
 
-	<!-- styles required for the loading screen -->
+		// window.onload = function() {
+		// 	app = new PIXI.Application(
+		// 		// {
+			""
+		// 		// }
+				
+		// 	);
+			//Add the canvas that Pixi automatically created for you to the HTML document
+document.body.appendChild(app.view);
+
+// player object
+player = new PIXI.Sprite.from(background-image);
+
+player.anchor.set(0.5); 
+player.x = app.view.width / 2; 
+player.y = app.view.height /2; 
+
+app.stage.addChild(player);
+
+// mouse interactions
+app.stage.interactive = true; 
+app.stage.on 
+
+const tilingSprite = new PIXI.TilingSprite(
+    texture,
+    app.screen.width,
+    app.screen.height,
+);
+app.stage.addChild(tilingSprite);
+
+let count = 0;
+
+app.ticker.add(() => {
+    count += 0.005;
+
+    tilingSprite.tileScale.x = 2 + Math.sin(count);
+    tilingSprite.tileScale.y = 2 + Math.cos(count);
+
+    tilingSprite.tilePosition.x += 1;
+    tilingSprite.tilePosition.y += 1;
+}); -->
+ 
+	<!-- LIVE PIXI - Attempts to load the pixi.js + pixi.min.js canvas from the folder and apply to the background image on the left -->
 	<style>
 
 		html:not(.c1-admin) {
@@ -348,7 +394,7 @@
 		}
 	</script>
 
-	<!--<script src="/_jsapps/api/_cargo/functions.js"></script>-->
+	<!--<script to -->
 	<script>
 		window.loading_animation = function(extra_class) {
 			var tmpl = _.template($('#loading_animation').html());
@@ -394,9 +440,9 @@
 		Following.Model = { };
 		Following.Collection = { };
 		
-		parent.Cargo.Event.on('body_mobile_class_added', function(isMobile){
-			document.body.classList[isMobile ? 'add' : 'remove']('mobile')
-		});
+		// parent.Cargo.Event.on('body_mobile_class_added', function(isMobile){
+		// 	document.body.classList[isMobile ? 'add' : 'remove']('mobile')
+		// });
 
 		if(parent.document.body.classList.contains('mobile')) {
 			document.body.classList.add('mobile');
@@ -419,52 +465,6 @@
 </div>
 </div>		</div>
 	
-	<!-- <script> FOR PIXI TRIALS 
-		let app; 
-		let player; 
-
-		// window.onload = function() {
-		// 	app = new PIXI.Application(
-		// 		// {
-			
-		// 		// }
-				
-		// 	);
-			//Add the canvas that Pixi automatically created for you to the HTML document
-document.body.appendChild(app.view);
-
-// player object
-player = new PIXI.Sprite.from(background-image);
-
-player.anchor.set(0.5); 
-player.x = app.view.width / 2; 
-player.y = app.view.height /2; 
-
-app.stage.addChild(player);
-
-// mouse interactions
-app.stage.interactive = true; 
-app.stage.on 
-
-const tilingSprite = new PIXI.TilingSprite(
-    texture,
-    app.screen.width,
-    app.screen.height,
-);
-app.stage.addChild(tilingSprite);
-
-let count = 0;
-
-app.ticker.add(() => {
-    count += 0.005;
-
-    tilingSprite.tileScale.x = 2 + Math.sin(count);
-    tilingSprite.tileScale.y = 2 + Math.cos(count);
-
-    tilingSprite.tilePosition.x += 1;
-    tilingSprite.tilePosition.y += 1;
-}); -->
- 
   </head>
 
 <html lang="en" data-predefined-style="true" data-css-presets="true" data-css-preset data-typography-preset>
@@ -522,16 +522,16 @@ app.ticker.add(() => {
 		      <path d="M495,201.19a257.61,257.61,0,0,0-14.19-47.05,260.51,260.51,0,0,0-23.17-42.9,253.09,253.09,0,0,0-69.06-68.85,245.21,245.21,0,0,0-42.88-23A227.1,227.1,0,0,0,298.88,5.26,241.81,241.81,0,0,0,249.5.31V0C111.7,0,0,111.7,0,249.5H.32a242.23,242.23,0,0,0,4.93,49.36A227.43,227.43,0,0,0,19.82,345a247.09,247.09,0,0,0,23,43,253.65,253.65,0,0,0,68.87,68.85,260.28,260.28,0,0,0,43,23.19,258.59,258.59,0,0,0,47,14.17,254.37,254.37,0,0,0,47.86,4.69V499c7.64,0,15.16-.47,22.62-1.14.88-.08,1.77-.05,2.66-.14,1.3-.13,2.56-.41,3.86-.56,6.82-.77,13.63-1.66,20.42-3A255.67,255.67,0,0,0,345.86,480a246.52,246.52,0,0,0,42.95-23.19A253.15,253.15,0,0,0,457.64,388a246.55,246.55,0,0,0,23.21-43A256.9,256.9,0,0,0,495,298.19a250.34,250.34,0,0,0,4.71-48.69A246.63,246.63,0,0,0,495,201.19ZM484.14,249.5H249.5V483.27a238.72,238.72,0,0,1-44.83-4.37,245.21,245.21,0,0,1-44-13.26,246.55,246.55,0,0,1-40.28-21.75,237.64,237.64,0,0,1-64.61-64.62,231.25,231.25,0,0,1-21.6-40.37,212.18,212.18,0,0,1-13.63-43.15,226.46,226.46,0,0,1-4.61-46.25H249.5V15.92c.2,0,.39,0,.59,0a227.57,227.57,0,0,1,45.79,4.67,212.11,212.11,0,0,1,43.79,13.26,228.85,228.85,0,0,1,40.22,21.52,237.92,237.92,0,0,1,64.82,64.6,246.65,246.65,0,0,1,21.72,40.2,243.26,243.26,0,0,1,13.28,44.09,231,231,0,0,1,4.43,45.26Z"/>
 		</svg>
 	</div>
-</div></script>
+<!-- </div></script>
 <script type="text/x-handlebars-template" id="page_master">{{#if this.is_set}} {{#each pages}} {{#if this.is_set}} <div data-container="set" data-id="{{id}}"> {{>page_master}} </div> {{else}} {{>page}} {{/if}} {{/each}} {{else}} {{>page}} {{/if}}</script>
 <!-- <script type="text/x-handlebars-template" id="page">{{#if pin}} {{!-- Do not render pins in this view --}} {{else}} <div data-container="page" class="page_container" {{#if page_options.local_layout_options.split_responsive}}split-responsive {{else}}{{#if page_options.local_layout_options.split_layout}}split-layout {{/if}}{{/if}}local-style="{{id}}" data-id="{{id}}"> <div class="page container container_width" data-container="content" data-id="{{id}}"> <bodycopy class="bodycopy content content_padding"> <div class="page_content clearfix" data-elementresizer data-resize-parent> {{print "content"}} </div> {{{ page_options.svg_overlay }}} </bodycopy> </div> <div class="page_background"></div> <style class="local-css" data-target="{{id}}"> {{{ page_options.local_css }}} </style> {{#if_all backdrop backdrop_enabled}} <div data-backdrop="{{backdrop.backdrop_path}}" class="backdrop" data-view="Backdrop" data-id="{{id}}"> [script type="text/json" data-set="backdrop_data">{{{stringify backdrop}}}[/script> </div> {{/if_all}} </div> {{/if}}</script> -->
-<script type="text/x-handlebars-template" id="content">{{#each content}} {{#if pin}}{{!-- Do not render pins in this view --}} {{else}} {{#if this.is_set}} <div data-container="{{#if this.is_set}}set{{else}}page{{/if}}" data-id="{{id}}"> {{>page_master}} </div> {{else}} {{>page_master}} {{/if}} {{/if}} {{/each}}</script>
+<!-- <script type="text/x-handlebars-template" id="content">{{#each content}} {{#if pin}}{{!-- Do not render pins in this view --}} {{else}} {{#if this.is_set}} <div data-container="{{#if this.is_set}}set{{else}}page{{/if}}" data-id="{{id}}"> {{>page_master}} </div> {{else}} {{>page_master}} {{/if}} {{/if}} {{/each}}</script>
 <script type="text/x-handlebars-template" id="sitemenu"><div id="site_menu_panel"> <div id="site_menu" class="site_menu"> <div class="page-link home-link {{#if display_options.site_menu_options.show_homepage}} {{else}}hidden{{/if}}"> <a href="" rel="home_page">Homepage</a> <div class="break"></div> </div> {{#each site_menu_tree.pages}} {{>sitemenu_item}} {{/each}} <div class="close">×</div> </div> </div></script>
-<script type="text/x-handlebars-template" id="sitemenu_item">{{#if is_set}} {{#if in_nav}} <div class="set-link" data-link-pid="{{id}}" data-prevtype="{{previous_type}}"> {{#if_equal set_id 0}} {{#if has_children}} {{#if_equal previous_type "page"}} <div class="break"></div> {{/if_equal}} {{/if}} {{/if_equal}} {{#if in_nav}} <a href="{{project_url}}" rel="history">{{title}}</a> {{/if}} <div data-set-wrapper {{#if in_nav}}class="indent"{{if}}> {{/if}} {{#each pages}} {{>sitemenu_item}} {{/each}} {{#if in_nav}} </div> </div> {{/if}} {{else}} {{#if in_nav}} <div class="page-link" data-link-pid="{{id}}" data-prevtype="{{previous_type}}"> <a href="{{project_url}}" rel="history">{{title}}</a> </div> {{/if}} {{/if}}</script>
-<script type="text/x-handlebars-template" id="pin"><div class="page_container{{#if pin_options.overlay}} overlay{{/if}}{{#if pin_options.accommodate}} accommodate{{/if}}{{#if pin_options.fixed}} fixed{{/if}}{{#if pin_options.exclude_mobile}} exclude_mobile{{/if}}{{#if pin_options.exclude_desktop}} exclude_desktop{{/if}}{{#if_equal pin_options.position 'bottom'}}{{#unless pin_options.fixed}} bottom_pin_invisibility{{/unless}}{{/if_equal}}" {{#if page_options.local_layout_options.split_responsive}}split-responsive {{else}}{{#if page_options.local_layout_options.split_layout}}split-layout {{if}}{{if}}local-style="{{id}}"> <div class="page container container_width clearfix" data-container="content" data-id="{{id}}"> <body copy class="bodycopy content content_padding"> {{#if_option "title_in_project"}} {{#if show_title}} <div class="project_title" style="display: none"> {{{title}}} </div> {{/if}} {{/if_option}} <div class="page_content clearfix" data-elementresizer data-resize-parent> {{print "content"}} </div> {{{ page_options.svg_overlay }}} </body copy> </div> <div class="page_background"></div> <style class="local-css" data-target="{{id}}"> {{{ page_options.local_css }}} </style> {{#if_all backdrop backdrop_enabled}} <div data-backdrop="{{backdrop.backdrop_path}}" class="backdrop" data-view="Backdrop" data-id="{{backdrop.page_id}}">[script type="text/json" data-set="backdrop_data">{{{stringify backdrop}}}[/script></div> {{/if_all}} </div></script>
-<script type="text/x-handlebars-template" id="pinned_top">{{#each pinned}} {{#if pin}} {{#if_equal pin_options.position 'top'}} {{>pin}} {{/if_equal}} {{/if}} {{/each}}</script>
-<script type="text/x-handlebars-template" id="pinned_bottom">{{#each pinned}} {{#if pin}} {{#if_equal pin_options.position 'bottom'}} {{>pin}} {{/if_equal}} {{/if}} {{/each}}</script>
-<script type="text/x-handlebars-template" id="thumbnail"><div class="container thumbnails_width clearfix"> <div class="content content_padding"> <div class="thumbnails"> {{>thumbnail_subview}} </div> </div> </div></script>
+<script type="text/x-handlebars-template" id="sitemenu_item">{{#if is_set}} {{#if in_nav}} <div class="set-link" data-link-pid="{{id}}" data-prevtype="{{previous_type}}"> {{#if_equal set_id 0}} {{#if has_children}} {{#if_equal previous_type "page"}} <div class="break"></div> {{/if_equal}} {{/if}} {{/if_equal}} {{#if in_nav}} <a href="{{project_url}}" rel="history">{{title}}</a> {{/if}} <div data-set-wrapper {{#if in_nav}}class="indent"{{if}}> {{/if}} {{#each pages}} {{>sitemenu_item}} {{/each}} {{#if in_nav}} </div> </div> {{/if}} {{else}} {{#if in_nav}} <div class="page-link" data-link-pid="{{id}}" data-prevtype="{{previous_type}}"> <a href="{{project_url}}" rel="history">{{title}}</a> </div> {{/if}} {{/if}}</script> -->
+<!-- <script type="text/x-handlebars-template" id="pin"><div class="page_container{{#if pin_options.overlay}} overlay{{/if}}{{#if pin_options.accommodate}} accommodate{{/if}}{{#if pin_options.fixed}} fixed{{/if}}{{#if pin_options.exclude_mobile}} exclude_mobile{{/if}}{{#if pin_options.exclude_desktop}} exclude_desktop{{/if}}{{#if_equal pin_options.position 'bottom'}}{{#unless pin_options.fixed}} bottom_pin_invisibility{{/unless}}{{/if_equal}}" {{#if page_options.local_layout_options.split_responsive}}split-responsive {{else}}{{#if page_options.local_layout_options.split_layout}}split-layout {{if}}{{if}}local-style="{{id}}"> <div class="page container container_width clearfix" data-container="content" data-id="{{id}}"> <body copy class="bodycopy content content_padding"> {{#if_option "title_in_project"}} {{#if show_title}} <div class="project_title" style="display: none"> {{{title}}} </div> {{/if}} {{/if_option}} <div class="page_content clearfix" data-elementresizer data-resize-parent> {{print "content"}} </div> {{{ page_options.svg_overlay }}} </body copy> </div> <div class="page_background"></div> <style class="local-css" data-target="{{id}}"> {{{ page_options.local_css }}} </style> {{#if_all backdrop backdrop_enabled}} <div data-backdrop="{{backdrop.backdrop_path}}" class="backdrop" data-view="Backdrop" data-id="{{backdrop.page_id}}">[script type="text/json" data-set="backdrop_data">{{{stringify backdrop}}}[/script></div> {{/if_all}} </div></script> -->
+<!-- <script type="text/x-handlebars-template" id="pinned_top">{{#each pinned}} {{#if pin}} {{#if_equal pin_options.position 'top'}} {{>pin}} {{/if_equal}} {{/if}} {{/each}}</script> -->
+<!-- <script type="text/x-handlebars-template" id="pinned_bottom">{{#each pinned}} {{#if pin}} {{#if_equal pin_options.position 'bottom'}} {{>pin}} {{/if_equal}} {{/if}} {{/each}}</script> -->
+<!-- <script type="text/x-handlebars-template" id="thumbnail"><div class="container thumbnails_width clearfix"> <div class="content content_padding"> <div class="thumbnails"> {{>thumbnail_subview}} </div> </div> </div></script> -->
 <script src="//static.cargo.site/libs/cargo.apicore.package.jquery213.min.js?FXQL56849&" data-main=""></script>
 <script src="https://static.cargo.site/assets/builds/apipackage.min.js?FXQL56849&" data-main=""></script>
 
@@ -553,7 +553,7 @@ app.ticker.add(() => {
 			window.scrollMonitor=function(){var t,i,o,e,s,n=function(){return window.pageYOffset||document.documentElement&&document.documentElement.scrollTop||document.body.scrollTop},h={},c=[],l="visibilityChange",r="enterViewport",a="fullyEnterViewport",p="exitViewport",w="partiallyExitViewport",u="locationChange",m="stateChange",f=[l,r,a,p,w,u,m],d={top:0,bottom:0},b=function(){return window.innerHeight||document.documentElement.clientHeight},v=function(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.documentElement.clientHeight)};function g(){if(h.viewportTop=n(),h.viewportBottom=h.viewportTop+h.viewportHeight,h.documentHeight=v(),h.documentHeight!==t){for(o=c.length;o--;)c[o].recalculateLocation();t=h.documentHeight}}function V(){h.viewportHeight=b(),g(),k()}function I(){clearTimeout(e),e=setTimeout(V,100)}function k(){for(s=c.length;s--;)c[s].update();for(s=c.length;s--;)c[s].triggerCallbacks()}function y(t,o){var e,s,n,c,b,v,g=this;this.watchItem=t,this.offsets=o?o===+o?{top:o,bottom:o}:{top:o.top||d.top,bottom:o.bottom||d.bottom}:d,this.callbacks={};for(var V=0,I=f.length;V<I;V++)g.callbacks[f[V]]=[];function k(t){if(0!==t.length)for(b=t.length;b--;)(v=t[b]).callback.call(g,i),v.isOne&&t.splice(b,1)}this.locked=!1,this.triggerCallbacks=function(){switch(this.isInViewport&&!e&&k(this.callbacks[r]),this.isFullyInViewport&&!s&&k(this.callbacks[a]),this.isAboveViewport!==n&&this.isBelowViewport!==c&&(k(this.callbacks[l]),s||this.isFullyInViewport||(k(this.callbacks[a]),k(this.callbacks[w])),e||this.isInViewport||(k(this.callbacks[r]),k(this.callbacks[p]))),!this.isFullyInViewport&&s&&k(this.callbacks[w]),!this.isInViewport&&e&&k(this.callbacks[p]),this.isInViewport!==e&&k(this.callbacks[l]),!0){case e!==this.isInViewport:case s!==this.isFullyInViewport:case n!==this.isAboveViewport:case c!==this.isBelowViewport:k(this.callbacks[m])}e=this.isInViewport,s=this.isFullyInViewport,n=this.isAboveViewport,c=this.isBelowViewport},this.recalculateLocation=function(){if(!this.locked){var t=this.top,i=this.bottom;if(this.watchItem.nodeName){var o=this.watchItem.style.display;"none"===o&&(this.watchItem.style.display="");var e=this.watchItem.getBoundingClientRect();this.top=e.top+h.viewportTop,this.bottom=e.bottom+h.viewportTop,"none"===o&&(this.watchItem.style.display=o)}else this.watchItem===+this.watchItem?this.watchItem>0?this.top=this.bottom=this.watchItem:this.top=this.bottom=h.documentHeight-this.watchItem:(this.top=this.watchItem.top,this.bottom=this.watchItem.bottom);this.top-=this.offsets.top,this.bottom+=this.offsets.bottom,this.height=this.bottom-this.top,void 0===t&&void 0===i||this.top===t&&this.bottom===i||k(this.callbacks[u])}},this.recalculateLocation(),this.update(),e=this.isInViewport,s=this.isFullyInViewport,n=this.isAboveViewport,c=this.isBelowViewport}h.viewportTop=null,h.viewportBottom=null,h.documentHeight=null,h.viewportHeight=b(),y.prototype={on:function(t,o,e){switch(!0){case t===l&&!this.isInViewport&&this.isAboveViewport:case t===r&&this.isInViewport:case t===a&&this.isFullyInViewport:case t===p&&this.isAboveViewport&&!this.isInViewport:case t===w&&this.isAboveViewport:if(o.call(this,i),e)return}if(!this.callbacks[t])throw new Error("Tried to add a scroll monitor listener of type "+t+". Your options are: "+f.join(", "));this.callbacks[t].push({callback:o,isOne:e||!1})},off:function(t,i){if(!this.callbacks[t])throw new Error("Tried to remove a scroll monitor listener of type "+t+". Your options are: "+f.join(", "));for(var o,e=0;o=this.callbacks[t][e];e++)if(o.callback===i){this.callbacks[t].splice(e,1);break}},one:function(t,i){this.on(t,i,!0)},recalculateSize:function(){this.height=this.watchItem.offsetHeight+this.offsets.top+this.offsets.bottom,this.bottom=this.top+this.height},update:function(){this.isAboveViewport=this.top<h.viewportTop,this.isBelowViewport=this.bottom>h.viewportBottom,this.isInViewport=this.top<=h.viewportBottom&&this.bottom>=h.viewportTop,this.isFullyInViewport=this.top>=h.viewportTop&&this.bottom<=h.viewportBottom||this.isAboveViewport&&this.isBelowViewport},destroy:function(){var t=c.indexOf(this);c.splice(t,1);for(var i=0,o=f.length;i<o;i++)this.callbacks[f[i]].length=0},lock:function(){this.locked=!0},unlock:function(){this.locked=!1}};for(var H=function(t){return function(i,o){this.on.call(this,t,i,o)}},E=0,T=f.length;E<T;E++){var B=f[E];y.prototype[B]=H(B)}try{g()}catch(t){try{window.$(g)}catch(t){throw new Error("If you must put scrollMonitor in the <head>, you must use jQuery.")}}function A(t){i=t,g(),k()}return"#throttle-scroll-monitor"===window.location.hash&&(A=_.throttle(A,66)),window.addEventListener?(window.addEventListener("scroll",A),window.addEventListener("resize",I)):(window.attachEvent("onscroll",A),window.attachEvent("onresize",I)),h.beget=h.create=function(t,i){"string"==typeof t?t=document.querySelector(t):t&&t.length>0&&(t=t[0]);var o=new y(t,i);return c.push(o),o.update(),o},h.update=function(){i=null,g(),k()},h.recalculateLocations=function(){h.documentHeight=0,h.update()},h}();
 		</script>
 
-		<customhtml></customhtml>		
+		<!-- <customhtml></customhtml>		 -->
 		<div class="loading" data-loading="page">
 <div class="loading_animation pulsing <%= extra_class %> ">
 	<div>
@@ -782,12 +782,12 @@ app.ticker.add(() => {
     </header>
     <div>
         <div class="row">
-			<div class="col s10">
+			<div class="col s25">
 			  <div class="row">
-				<div class="input-field col s10">
+				<div class="input-field col s25">
 				  <i class="material-icons prefix">textsms</i>
-				  <input type="text" id="autocomplete-input" class="autocomplete">
-				  <label for="autocomplete-input">Autocomplete</label>
+				  <input type="text" id="box-input" class="box-input">
+				  <label for="box-input">Autocomplete your film review</label>
 				</div>
 			  </div>
 			</div>
@@ -809,7 +809,7 @@ app.ticker.add(() => {
     <table class="striped responsive-table">
       <thead>
         <tr>
-          <th>Messages</th>
+          <h4>Messages</h4>
         </tr>
       </thead>
       <tbody id="message-container">
@@ -836,7 +836,7 @@ app.ticker.add(() => {
 			<br>
 			<h6>Film + TV: Search Summary</h6>
 		  </section>
-		  <section class="impressions">20 Results</section>
+		  <section class="impressions"><small>Results</small></section>
 		  <div class="clearfix"></div>
 		  <br>
 		</article>

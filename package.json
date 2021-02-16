@@ -1,9 +1,4 @@
 {
-  "start": "parcel src/index.html --out-dir docs",
-"build": "parcel build src/index.html --out-dir docs --public-url ./"
-}
-
-{
   "name": "firebase-parcel",
   "version": "1.0.0",
   "main": "index.html",
@@ -26,7 +21,7 @@
     "sinon": "^9.2.4"
   },
   "dependencies": {
-    "firebase": "^8.2.5",
+    "firebase": "^8.2.7",
     "pixi.js": "^5.3.7"
   }
 }

@@ -11,8 +11,13 @@
   height: auto;
 }
 
+.article:hover {
+  padding: 0 2%;
+  background-color: #4285f4;
+}
+
 .article .featuredImage {
-  background-image: url("images/GAFinal.png");
+  background-image: url();
   width: 12%;
   float: left;
   margin: 1.5%;
@@ -20,27 +25,27 @@
 }
 
 .featuredImage {
-  background-image: url("images/GAFinal.png");
+  background-image: url()
   max-width: 100%;
   border-radius: 50px;
 }
 
-.article .articleContent {
-  background-image: url("images/GAFinal.png");
+.article .kubrickContent {
+  background-image: url();
   width: 70%;
   float: left;
 }
 
-.article .articleContent a {
+.article .kubrickContent a {
   text-decoration: none;
 }
 
-.article .articleContent h3 {
+.article .kubrickContent h3 {
   margin-bottom: 0;
   color: #fe052c;
 }
 
-.article .articleContent h6 {
+.article .kubrickContent h6 {
   margin-top: 0;
   color: #666;
 }
@@ -53,7 +58,7 @@
   text-align: right;
   color: #097fb2;
 }
-*/
+*/Users/bw/jsdr-unit2-project-starter-repo/styles/html5bp.css
 
 /**
  * Content
@@ -390,8 +395,6 @@ body.mobile #site_menu .close {
 }
 
 /**
- 
-
 
 /**
  * Quick View
